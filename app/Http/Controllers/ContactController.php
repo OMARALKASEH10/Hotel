@@ -38,7 +38,7 @@ class ContactController extends Controller
     Contact::create($data);
 
     // جلب الرقم الحقيقي من النظام
-    $hotelPhone = Setting::where('key', 'phone')->first()->value ?? '218924843695';
+    $hotelPhone = Setting::where('key', 'phone')->first()->value ?? '0914002252';
 
     $whatsAppText = "طلب جديد من موقع الفندق\n\n" .
                     "الاسم: {$data['name']}\n" .
