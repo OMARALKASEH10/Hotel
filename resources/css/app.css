@@ -220,20 +220,6 @@ body.dark-mode a {
 
 
 
-@media (max-width: 991px) {
-    /* جعل القائمة تظهر بشكل صحيح فوق المحتوى */
-    .navbar-collapse {
-        background-color: #ffffff !important;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        z-index: 1050;
-        padding: 20px;
-        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        border-radius: 0 0 15px 15px;
-    }
-
     /* إصلاح تداخل اسم الفندق */
     .navbar-brand span {
         max-width: 140px;

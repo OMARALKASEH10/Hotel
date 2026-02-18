@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm" style="direction: rtl;">
-    <div class="container d-flex justify-content-between align-items-center">
+    <div class="container">
         
         <a class="navbar-brand d-flex align-items-center m-0" href="{{ route('home') }}">
             <img src="{{ asset('images/HotelLogo.jpeg') }}" alt="Logo" class="ms-2 rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
