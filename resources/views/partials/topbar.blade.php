@@ -1,4 +1,4 @@
-<div class="top-bar d-none d-md-block">
+<div class="top-bar">
     <div class="container d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center gap-4">
             <a href="https://www.facebook.com/omar.alkaseh.2025" target="_blank">

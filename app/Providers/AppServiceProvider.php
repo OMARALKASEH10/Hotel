@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-       /* $entries = Giveaway::latest()->get();
+        $entries = Giveaway::latest()->get();
         $campaigns = GiveawayCampaign::where('draw_done', false)
             ->where('end_date', '>=', now())
             ->orderBy('start_date', 'asc')
@@ -95,9 +95,7 @@ class AppServiceProvider extends ServiceProvider
             'time_to_minute' => $time_to_minute,
             'time_to_ampm' => $time_to_ampm,
         ]);
-        */
-
-        \Illuminate\Support\Facades\View::share('phone', '123456789');
+        
 
     }
 }
