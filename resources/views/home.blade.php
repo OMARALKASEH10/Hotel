@@ -9,7 +9,7 @@
 
 
 
-<header class="hero" id="home" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ asset('images/hero.jpg') }}'); background-size: cover; background-position: center; min-height: 70vh; display: flex; align-items: center;">
+<header class="hero" id="home" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ asset('images/majd.jpg') }}'); background-size: cover; background-position: center; min-height: 70vh; display: flex; align-items: center;">
     <div class="container text-right text-white animate__animated animate__fadeIn">
         <h1 class="display-3 fw-bold mb-4">تجربة فندقية تفوق التوقعات</h1>
         <p class="lead mb-5">بخبرتنا الواسعة في عالم الضيافة، نقدم أقصى درجات الراحة والرفاهية.</p>
