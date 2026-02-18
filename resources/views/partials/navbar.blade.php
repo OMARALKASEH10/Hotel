@@ -1,59 +1,67 @@
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
-
+<nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm" style="direction: rtl;">
     <div class="container">
+        <div class="d-flex align-items-center">
+<a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
+    <img src="{{ asset('images/HotelLogo.jpeg') }}" 
+         alt="Logo" 
+         class="me-2 rounded-circle" 
+         style="width: 45px; height: 45px; object-fit: cover; border: 2px solid #198754;">
+    
+    <span class="fw-bold text-success" style="font-size: 1.2rem;">فندق مجد الضيافة</span>
+</a>
 
-        <!-- الشعار -->
-        <a class="navbar-brand fw-bold text-success" href="#">
-            فندق مجد الضيافة
+            @guest
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item">
+<a class="nav-link fw-bold text-dark" href="{{ route('login') }}">
+    تسجيل الدخول / إنشاء حساب
+</a>
+
+                    </li>
+                </ul>
+            @endguest
+
+            @auth
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item">
+                        <span class="nav-link text-muted">مرحباً، {{ Auth::user()->name }}</span>
+                    </li>
+                </ul>
+            @endauth
+        </div>
+
+        @auth
+<form method="POST" action="{{ route('logout') }}" class="d-inline">
+    @csrf
+    <button type="submit" class="btn btn-outline-danger btn-sm rounded-pill">
+        <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+    </button>
+</form>
+@endauth
+
+@auth
+    @if(auth()->user()->is_admin)
+        <a href="{{ route('admin.dashboard') }}"
+           class="btn btn-success btn-sm rounded-pill me-2">
+            لوحة التحكم
         </a>
+    @endif
+@endauth
 
-        <!-- زر الهاتف -->
-        <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainMenu">
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- القائمة -->
-        <div class="collapse navbar-collapse" id="mainMenu">
 
-            <ul class="navbar-nav ms-auto text-end">
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">الرئيسية</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">من نحن</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">خدماتنا</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#vision">رؤيتنا</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#location">موقعنا</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link btn btn-success text-white px-3 ms-2" href="#contact">
-                        تواصل معنا
-                    </a>
-                </li>
-
+            <ul class="navbar-nav" id="nav-links-container">
+                <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">خدماتنا</a></li>
+                <li class="nav-item"><a class="nav-link" href="#vision">رؤيتنا</a></li>
+                <li class="nav-item"><a class="nav-link" href="#location">موقعنا</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
             </ul>
-
-        </div>
-
     </div>
 </nav>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
