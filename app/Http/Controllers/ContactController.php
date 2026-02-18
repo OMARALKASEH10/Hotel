@@ -29,26 +29,28 @@ class ContactController extends Controller
         ];
 
         // 1️⃣ التحقق من البيانات
-    $data = $request->validate([
-        'name'  => 'required|string|max:100',
-        'phone' => 'required|string|max:10',
-        'topic' => 'required|string',
-    ]);
+        $data = $request->validate([
+            'name'  => 'required|string|max:100',
+            'phone' => 'required|string|max:10',
+            'topic' => 'required|string',
+        ], $messages);
 
-    Contact::create($data);
+        // 2️⃣ حفظ البيانات في قاعدة البيانات
+        Contact::create($data);
 
-    // جلب الرقم الحقيقي من النظام
-    $hotelPhone = Setting::where('key', 'phone')->first()->value ?? '0914002252';
+        // 3️⃣ الحصول على رقم صاحب الفندق من Settings
+$hotelPhone = Setting::get('phone'); // لن يستخدم الرقم الافتراضي بعد الآن
 
-    $whatsAppText = "طلب جديد من موقع الفندق\n\n" .
-                    "الاسم: {$data['name']}\n" .
-                    "الهاتف: {$data['phone']}\n" .
-                    "الرسالة: {$data['topic']}";
+// تجهيز رابط الواتساب
+$whatsAppText = "طلب جديد من موقع الفندق\n\n" .
+                "الاسم: {$data['name']}\n" .
+                "الهاتف: {$data['phone']}\n" .
+                "الرسالة: {$data['topic']}";
 
-    return response()->json([
-        'success' => true,
-        'whatsapp_url' => 'https://wa.me/' . $hotelPhone . '?text=' . urlencode($whatsAppText)
-    ]);
+return response()->json([
+    'success' => true,
+    'whatsapp_url' => 'https://wa.me/' . $hotelPhone . '?text=' . urlencode($whatsAppText)
+]);
 
         }
 
