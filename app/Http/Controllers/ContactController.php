@@ -39,19 +39,18 @@ class ContactController extends Controller
         Contact::create($data);
 
         // 3️⃣ الحصول على رقم صاحب الفندق من Settings
-        $hotelPhone = Setting::get('phone', '218914002252'); // رقم افتراضي إذا لم يُخزن
+$hotelPhone = Setting::get('phone'); // لن يستخدم الرقم الافتراضي بعد الآن
 
-        // 3️⃣ تجهيز رسالة واتساب
-        $whatsAppText = "طلب جديد من موقع الفندق\n\n" .
-                        "الاسم: {$data['name']}\n" .
-                        "الهاتف: {$data['phone']}\n" .
-                        "الرسالة: {$data['topic']}";
+// تجهيز رابط الواتساب
+$whatsAppText = "طلب جديد من موقع الفندق\n\n" .
+                "الاسم: {$data['name']}\n" .
+                "الهاتف: {$data['phone']}\n" .
+                "الرسالة: {$data['topic']}";
 
-        // 4️⃣ إرجاع JSON للـ Ajax
-        return response()->json([
-            'success' => true,
-            'whatsapp_url' => 'https://wa.me/' . $hotelPhone . '?text=' . urlencode($whatsAppText)
-        ]);
+return response()->json([
+    'success' => true,
+    'whatsapp_url' => 'https://wa.me/' . $hotelPhone . '?text=' . urlencode($whatsAppText)
+]);
 
         }
 
