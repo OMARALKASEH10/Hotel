@@ -9,7 +9,7 @@ class SettingController extends Controller
 {
     public function edit()
     {
-        $phone = Setting::get('phone', '218924843695');
+        $phone = Setting::get('phone', '0914002252');
 
         // قراءة الأيام
         $working_days = Setting::get('working_days', 'السبت-الأربعاء');
