@@ -218,5 +218,9 @@ body.dark-mode a {
 }
 
 
+.footer-links a:hover i {
+    transform: translateX(-5px); /* تحريك السهم باتجاه النص */
+    color: #1a9e52;             /* تلوين السهم بالأخضر */
+}
 
 
