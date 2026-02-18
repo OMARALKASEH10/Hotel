@@ -44,3 +44,15 @@ window.toggleDarkMode = function () {
             });
         });
     });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarCollapse = document.querySelector('#navLinksMenu');
+
+    navbarToggler.addEventListener('click', function () {
+        var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: true
+        });
+    });
+});
