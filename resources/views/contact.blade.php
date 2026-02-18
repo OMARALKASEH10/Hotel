@@ -214,10 +214,11 @@
                 </div>
 
                 <div class="d-flex gap-3">
-                    <a href="https://wa.me/218924843695" class="social-btn">
-                        <i class="fab fa-whatsapp text-success"></i>
-                        واتساب
-                    </a>
+<a href="https://wa.me/{{ Setting::get('phone', '0914002252') }}" class="social-btn">
+    <i class="fab fa-whatsapp text-success"></i>
+    واتساب
+</a>
+
                     <a href="https://www.facebook.com/omar.alkaseh.2025" class="social-btn">
                         <i class="fab fa-facebook-f text-primary"></i>
                         فيسبوك
