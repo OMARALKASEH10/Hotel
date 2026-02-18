@@ -394,6 +394,57 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
 </section>
 
+<section id="room-types" class="py-5" style="background-color: #fcfcfc;">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5 text-success animate__animated animate__fadeInDown">خيارات الإقامة (الغرف)</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-3 col-6">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="{{ asset('images/One.jpeg') }}" class="card-img-top" alt="غرفة فردية" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3">
+                        <h6 class="fw-bold mb-1">غرفة فردية</h6>
+                        <small class="text-muted">فراش نوم واحد (1)</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="{{ asset('images/Two.jpeg') }}" class="card-img-top" alt="غرفة زوجية" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3">
+                        <h6 class="fw-bold mb-1">غرفة زوجية</h6>
+                        <small class="text-muted">2 فراش نوم</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="{{ asset('images/Three.jpeg') }}" class="card-img-top" alt="غرفة ثلاثية" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3">
+                        <h6 class="fw-bold mb-1">غرفة ثلاثية</h6>
+                        <small class="text-muted">3 فراش نوم</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <img src="{{ asset('images/Four.jpeg') }}" class="card-img-top" alt="غرفة رباعية" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3">
+                        <h6 class="fw-bold mb-1">غرفة رباعية</h6>
+                        <small class="text-muted">4 فراش نوم</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 <div style="height:120px"></div>
 
 

@@ -233,10 +233,29 @@ body.dark-mode a {
         border-bottom: 1px solid #f8f9fa;
         color: #333 !important;
     }
-}
 
 /* تنسيق القائمة المنسدلة للمستخدم */
 .dropdown-menu {
     min-width: 180px;
     border-radius: 12px;
+}
+
+
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: white;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        z-index: 1050;
+        padding: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        border-radius: 0 0 15px 15px;
+    }
+    .navbar-nav .nav-link {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
 }
