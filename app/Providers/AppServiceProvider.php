@@ -50,7 +50,7 @@ class AppServiceProvider extends ServiceProvider
 
         $messagesCount = Contact::count();
 
-
+        
         $phone = Setting::get('phone', '218924843695');
 
         $working_days = Setting::get('working_days', 'السبت-الأربعاء');

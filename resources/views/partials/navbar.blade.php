@@ -2,7 +2,7 @@
     <div class="container d-flex justify-content-between align-items-center">
         
         <a class="navbar-brand d-flex align-items-center m-0" href="{{ route('home') }}">
-            <img src="{{ asset('images/HotelLogo.jpeg') }}" alt="Logo" class="ms-2 rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
+            <img src="{{ asset('images/Logo2.jpeg') }}" alt="Logo" class="ms-2 rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
             <span class="fw-bold text-success" style="font-size: 0.9rem;">فندق مجد الضيافة</span>
         </a>
 
